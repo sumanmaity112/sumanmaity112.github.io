@@ -1,0 +1,17 @@
+title: Suman Maity
+email: suman.maity112@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is a basic site to share knowledge, thoughts and ideas
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: sumanmaity112
+github_username:  sumanmaity112
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
