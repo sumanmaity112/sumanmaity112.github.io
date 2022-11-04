@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sumanmaity112/jekyll-import.git
-  revision: 146d86bd199434b8c9950c42528e26447bf6c671
+  revision: 59f99c07f1181bf6a8c207f40fcf5aa0d19f65c9
   specs:
     jekyll-import (0.21.0)
       jekyll (>= 3.7, < 5.0)
@@ -17,7 +17,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
-    ethon (0.15.0)
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.15.5)
