@@ -1,0 +1,31 @@
+name: "Import from Medium"
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3 # reads from a '.ruby-version' or '.tools-version' file if 'ruby-version' is omitted
+          bundler-cache: true
+
+      - name: Import blogs from medium
+        run: ./run.sh import-from-medium
+
+      - name: Commit and push imported blogs
+        run: |
+          git add _posts
+          ./run.sh commit-as-github-action
+          git push origin main
