@@ -15,6 +15,10 @@ _commit_as_github_action(){
   fi
 }
 
+_serve(){
+  bundle exec jekyll serve -o --livereload "$@"
+}
+
 _usage() {
     cat <<EOF
 Usage: $0 command
@@ -22,6 +26,7 @@ Usage: $0 command
 commands:
   import-from-medium            Import posts from Medium using RSS feed
   commit-as-github-action       Commit the changes as GitHub action user. This will be used only in workflow
+  serve                         Run development server
 EOF
   exit 1
 }
@@ -31,5 +36,6 @@ shift || true
 case ${CMD} in
   import-from-medium) _import_from_medium ;;
   commit-as-github-action) _commit_as_github_action ;;
+  serve) _serve "$@" ;;
   *) _usage ;;
 esac
