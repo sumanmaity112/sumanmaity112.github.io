@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/sumanmaity112/jekyll-import.git
-  revision: 59f99c07f1181bf6a8c207f40fcf5aa0d19f65c9
+  revision: f0c5c872a32f06bcff3f978c92121423b0a443b6
   specs:
     jekyll-import (0.21.0)
       jekyll (>= 3.7, < 5.0)
       nokogiri (~> 1.0)
-      reverse_markdown (~> 1.0)
+      reverse_markdown (~> 2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -60,7 +60,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-chirpy (5.3.1)
+    jekyll-theme-chirpy (5.3.2)
       jekyll (~> 4.1)
       jekyll-archives (~> 2.2)
       jekyll-paginate (~> 1.1)
@@ -91,7 +91,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    reverse_markdown (1.4.0)
+    reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
     rouge (4.0.0)
