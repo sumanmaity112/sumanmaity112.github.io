@@ -4,7 +4,7 @@ set -euo pipefail
 MEDIUM_USER_NAME="suman.maity112"
 
 _import_from_medium(){
-  bundle exec jekyll import medium --username "${MEDIUM_USER_NAME}"
+  bundle exec jekyll import medium --username "${MEDIUM_USER_NAME}" --canonical_link true
 }
 
 _commit_as_github_action(){
