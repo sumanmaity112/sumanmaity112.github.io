@@ -1,6 +1,6 @@
 fileignoreconfig:
 - filename: Gemfile.lock
-  checksum: dca436af6fa5f3ab3fd072a864c8f43cf064373b4586810ba33ed6d9026e019b
+  checksum: 604de4b6a5e548d156fe39c04491f52c8736a544f617ed6ee9c294fe849fabc4
 - filename: images/avatar.jpg
   checksum: fabc16f5e2c27c2bef78a652f5bb1187b3c0a3459653d0ad469819da233af081
 version: "1.0"
