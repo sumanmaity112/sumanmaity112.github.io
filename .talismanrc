@@ -4,5 +4,5 @@ fileignoreconfig:
 - filename: images/avatar.jpg
   checksum: fabc16f5e2c27c2bef78a652f5bb1187b3c0a3459653d0ad469819da233af081
 - filename: assets/resume.pdf
-  checksum: 351bdf75967e66fff02ed6b56fdef9471e64b7eebe75e9dab3568a10fd835f6a
+  checksum: 5ce460c001d1315e25bb1bf70878037543cdf03d1eb7c22910228fd52373ae2b
 version: "1.0"
