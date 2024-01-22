@@ -18,11 +18,11 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
-gem "webrick", "~> 1.8"
-gem "jekyll-import", "~>0.23.0"
+gem "webrick", "~> 1.7"
+gem "jekyll-import", git: "https://github.com/jekyll/jekyll-import.git"
 
 gem "rss", "~> 0.2.9"
 
 gem "eventmachine", "~> 1.2"
 
-gem "jekyll-theme-chirpy", "~> 6.4"
+gem "jekyll-theme-chirpy", "~> 6.1"
