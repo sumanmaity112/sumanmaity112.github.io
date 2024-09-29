@@ -1,10 +1,10 @@
 fileignoreconfig:
 - filename: Gemfile.lock
-  checksum: d96ee448dbda2ef9bd7940fbb5e74cd93a783d4b1781851062758ca52fad0cce
+  checksum: d45a05017d9f46cd40c87737a23cab44c778a74f7d56a25a57ab6434e23028ba
 - filename: assets/resume.pdf
   checksum: 5ce460c001d1315e25bb1bf70878037543cdf03d1eb7c22910228fd52373ae2b
 - filename: images/avatar.jpg
   checksum: fabc16f5e2c27c2bef78a652f5bb1187b3c0a3459653d0ad469819da233af081
 - filename: run.sh
-  checksum: 7380a4cf128dcf8844a34575f44bd053fda0db878cff6b40bf1063ce453c5bfb
+  checksum: 62d1b1fd5d442689b1ec4714a8740072fa5d7306cce910f21c5531a931ac5322
 version: "1.0"

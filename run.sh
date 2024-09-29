@@ -2,6 +2,8 @@
 set -euo pipefail
 
 MEDIUM_USER_NAME="suman.maity112"
+DOCKER_CONTAINER_NAME="ruby-$(cat .ruby-version)"
+DOCKER_IMAGE_NAME="ruby:$(cat .ruby-version)"
 
 _import_from_medium(){
   bundle exec jekyll import medium --username "${MEDIUM_USER_NAME}" --canonical_link true
@@ -21,8 +23,13 @@ _serve(){
 }
 
 _serve_using_docker() {
-  docker run --rm -d -p 4000:4000 -p 35729:35729 -v "$PWD":/usr/src/app -w /usr/src/app --name "ruby-$(cat .ruby-version)" "ruby:$(cat .ruby-version)" ./run.sh serve "$@"
+  docker run --rm -d -p 4000:4000 -p 35729:35729 -v "$PWD":/usr/src/app -w /usr/src/app --name "${DOCKER_CONTAINER_NAME}" "${DOCKER_IMAGE_NAME}" ./run.sh serve "$@"
   docker logs "ruby-$(cat .ruby-version)" -f
+}
+
+_develop_using_docker() {
+  docker run --rm -d -p 4000:4000 -p 35729:35729 -v "$PWD":/usr/src/app -w /usr/src/app --name "${DOCKER_CONTAINER_NAME}" "${DOCKER_IMAGE_NAME}" sleep infinity
+  docker exec -it "${DOCKER_CONTAINER_NAME}" /bin/bash
 }
 
 _usage() {
@@ -34,6 +41,7 @@ commands:
   commit-as-github-action       Commit the changes as GitHub action user. This will be used only in workflow
   serve                         Run development server
   serve-using-docker            Use docker to run development server
+  develop-using-docker          Use docker for development
 EOF
   exit 1
 }
@@ -45,5 +53,6 @@ case ${CMD} in
   commit-as-github-action) _commit_as_github_action ;;
   serve) _serve "$@" ;;
   serve-using-docker) _serve_using_docker "$@" ;;
+  develop-using-docker) _develop_using_docker ;;
   *) _usage ;;
 esac
