@@ -1,6 +1,8 @@
 fileignoreconfig:
 - filename: Gemfile.lock
   checksum: d45a05017d9f46cd40c87737a23cab44c778a74f7d56a25a57ab6434e23028ba
+- filename: _tabs/contributions.md
+  checksum: 885945d382675da83c8759dc06ac5c14a1c7b0959dde1a97efdfa412a03c245f
 - filename: assets/resume.pdf
   checksum: 5ce460c001d1315e25bb1bf70878037543cdf03d1eb7c22910228fd52373ae2b
 - filename: images/avatar.jpg
